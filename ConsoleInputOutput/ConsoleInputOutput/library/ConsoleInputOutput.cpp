@@ -19,7 +19,7 @@ namespace consoleio {
 #ifndef _MSC_VER
 	static struct termios old_termios;
 	static bool initialized = false;
-	const int STDIN_DESCRIPTOR_ID = 0;
+	static const int STDIN_DESCRIPTOR_ID = 0;
 
 	static void restore() {
 		tcsetattr(STDIN_DESCRIPTOR_ID, TCSANOW, &old_termios);
